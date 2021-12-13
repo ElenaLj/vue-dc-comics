@@ -1,0 +1,42 @@
+@import './partials/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+/* - - - - - - - - - - 
+    commons
+- - - - - - - - - - - */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* - - - - - - - - - - 
+    global
+- - - - - - - - - - - */
+
+
+/* - - - - - - - - - - 
+    containers
+- - - - - - - - - - - */
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* - - - - - - - - - - 
+    typo
+- - - - - - - - - - - */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+    
+    li a {
+        text-decoration: none;
+    }
+}

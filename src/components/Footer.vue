@@ -4,10 +4,10 @@
 
 <script>
 export default {
-
+    name: "Footer"
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>

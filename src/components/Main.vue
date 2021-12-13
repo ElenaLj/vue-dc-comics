@@ -4,10 +4,10 @@
 
 <script>
 export default {
-
+    name: "Main"
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
