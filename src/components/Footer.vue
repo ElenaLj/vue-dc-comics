@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="container footer">
+    <div class="container-footer">
 
       <!-- footer top section -->
       <div class="footer-top">
@@ -38,7 +38,23 @@
       <!-- /ooter middle section -->
 
       <!-- footer bottom section -->
-      <div class="footer-bottom"></div>
+      <div class="footer-bottom">
+
+        <div class="container">
+
+          <button>sign-up now!</button>
+
+          <div>
+            <span>follow us</span>
+            <img src="../assets/img/footer-facebook.png" alt="facebook">
+            <img src="../assets/img/footer-twitter.png" alt="twitter">
+            <img src="../assets/img/footer-youtube.png" alt="youtube">
+            <img src="../assets/img/footer-pinterest.png" alt="pinterest">
+            <img src="../assets/img/footer-periscope.png" alt="periscope">
+          </div>
+        </div>
+
+      </div>
       <!-- /footer bottom section -->
     </div>
   </footer>
@@ -52,28 +68,58 @@ export default {
 
 <style lang="scss">
 @import '../assets/style/partials/variables.scss';
-
-  footer {
+  .footer-top {
     background-color: $background-blue; 
+    display: flex;
+    justify-content: center;
+    color: $text-light;
+    font-size: 14px;
+    text-transform: $text-uppercase;
 
-    .footer-top {
+    div {
       display: flex;
-      justify-content: center;
-      color: $text-light;
-      font-size: 14px;
-      text-transform: $text-uppercase;
+      align-items: center;
+      padding: 20px;
+
+      img {
+        height: 50px;
+        max-width: 50px;
+        margin-right: 8px;
+      }
+    } 
+  }
+
+  .footer-bottom {
+    background-color: $background-grey;
+
+      .container {
+        height: 100px;
+      }
+
+      button {
+        border: 1px solid #0C7CEC;
+        background-color: transparent;
+        padding: 20px;
+        color: $text-light;
+        font-weight: $text-bold;
+        text-transform: $text-uppercase;
+      }
 
       div {
         display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
         align-items: center;
-        padding: 20px;
+
+        span {
+          color: $text-blue;
+          text-transform: $text-uppercase;
+          font-weight: $text-bold;
+        }
 
         img {
-          height: 50px;
-          max-width: 50px;
-          margin-right: 8px;
+          margin: 0 10px;
         }
       }
     }
-  }
 </style>

@@ -24,10 +24,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
-    &.footer {
-        justify-content: center;
-    }
+.container-footer {
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* - - - - - - - - - - 
