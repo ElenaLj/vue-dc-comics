@@ -38,6 +38,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h3 {
+    color: $text-light;
+    font-size: 15px;
+    text-transform: $text-uppercase;
+}
+
 ul {
     list-style: none;
     

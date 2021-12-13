@@ -32,9 +32,8 @@ export default {
 @import '../assets/style/partials/variables.scss';
     header {
         background-color: $background-light;
-    }
 
-    ul {
+        ul {
         display: flex;
 
         li a {
@@ -45,5 +44,6 @@ export default {
             font-weight: $text-bold;
             text-transform: $text-uppercase;
         }
+    }
     }
 </style>
