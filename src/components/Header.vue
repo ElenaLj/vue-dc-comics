@@ -31,7 +31,6 @@ export default {
 <style lang="scss">
 @import '../assets/style/partials/variables.scss';
     header {
-        height: 100px;
         background-color: $background-light;
     }
 
@@ -39,12 +38,12 @@ export default {
         display: flex;
 
         li a {
-        display: inline-block;
-        padding: 10px;
-        color: $text-dark;
-        font-size: 13px;
-        font-weight: $text-bold;
-        text-transform: $text-uppercase;
+            display: inline-block;
+            padding: 10px;
+            color: $text-dark;
+            font-size: 13px;
+            font-weight: $text-bold;
+            text-transform: $text-uppercase;
         }
     }
 </style>

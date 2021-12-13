@@ -1,5 +1,9 @@
 <template>
-  <main></main>
+  <main>
+    <div class="container">
+      ******  CONTENT GOES HERE ******
+    </div>
+  </main>
 </template>
 
 <script>
@@ -9,5 +13,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/style/partials/variables.scss';
 
+  main {
+    height: 100px;
+    background-color: $background-dark;
+
+    .container {
+      color: $text-light;
+    }
+  }
 </style>
