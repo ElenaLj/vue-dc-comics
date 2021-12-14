@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Jumbo/>
     <div class="container">
       <Comics/>
     </div>
@@ -7,10 +8,13 @@
 </template>
 
 <script>
-import Comics from "../sections/Comics.vue"
+import Comics from "../sections/Comics.vue";
+import Jumbo from "../sections/Jumbo.vue"
+
 export default {
     name: "Main",
     components: {
+      Jumbo,
       Comics
     }
 }
