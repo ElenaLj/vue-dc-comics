@@ -5,12 +5,12 @@
       <!-- footer top section -->
       <div class="footer-top">
 
-        <div>
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="Digital Comics pic">
-          <span>digital comics</span>
+        <div v-for="(menu, index) in leafMenu" :key="index">
+          <img :src="require(`../assets/img/${menu.src}`)" :alt="menu.alt">
+          <span>{{menu.text}}</span>
         </div>
 
-        <div>
+        <!-- <div>
           <img src="../assets/img/buy-comics-merchandise.png" alt="Merch">
           <span>dc merchandise</span>
         </div>
@@ -28,7 +28,7 @@
         <div>
           <img src="../assets/img/buy-dc-power-visa.svg" alt="DC Power Visa">
           <span>dc power visa</span>
-        </div>
+        </div> -->
 
       </div>
       <!-- /footer top section -->
@@ -128,7 +128,38 @@
 
 <script>
 export default {
-    name: "Footer"
+    name: "Footer",
+    data() {
+      return {
+        leafMenu: [
+          {
+            text: "digital comics",
+            src: "buy-comics-digital-comics.png",
+            alt: "Digital Comics pic"
+          },
+          {
+            text: "dc merchandise",
+            src: "buy-comics-merchandise.png",
+            alt: "Merch"
+          },
+          {
+            text: "subscription",
+            src: "buy-comics-subscriptions.png",
+            alt: "Subscriptions"
+          },
+          {
+            text: "comic shop locator",
+            src: "buy-comics-shop-locator.png",
+            alt: "Shop Locator"
+          },
+          {
+            text: "dc power visa",
+            src: "buy-dc-power-visa.svg",
+            alt: "DC Power Visa"
+          }
+        ]
+      }
+    }
 }
 </script>
 
