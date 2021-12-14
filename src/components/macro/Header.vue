@@ -2,7 +2,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="../assets/img/dc-logo.png" alt="DC logo small">
+                <img src="../../assets/img/dc-logo.png" alt="DC logo small">
             </div>
             <nav>
                 <ul>
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/style/partials/variables.scss';
+@import '../../assets/style/partials/variables.scss';
     header {
         background-color: $background-light;
 

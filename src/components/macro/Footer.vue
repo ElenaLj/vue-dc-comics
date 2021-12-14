@@ -6,7 +6,7 @@
       <div class="footer-top">
 
         <div v-for="(menu, index) in leafMenu" :key="index">
-          <img :src="require(`../assets/img/${menu.src}`)" :alt="menu.alt">
+          <img :src="require(`../../assets/img/${menu.src}`)" :alt="menu.alt">
           <span>{{menu.text}}</span>
         </div>
 
@@ -112,11 +112,11 @@
 
           <div>
             <span>follow us</span>
-            <img src="../assets/img/footer-facebook.png" alt="facebook">
-            <img src="../assets/img/footer-twitter.png" alt="twitter">
-            <img src="../assets/img/footer-youtube.png" alt="youtube">
-            <img src="../assets/img/footer-pinterest.png" alt="pinterest">
-            <img src="../assets/img/footer-periscope.png" alt="periscope">
+            <img src="../../assets/img/footer-facebook.png" alt="facebook">
+            <img src="../../assets/img/footer-twitter.png" alt="twitter">
+            <img src="../../assets/img/footer-youtube.png" alt="youtube">
+            <img src="../../assets/img/footer-pinterest.png" alt="pinterest">
+            <img src="../../assets/img/footer-periscope.png" alt="periscope">
           </div>
         </div>
 
@@ -164,7 +164,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/style/partials/variables.scss';
+@import '../../assets/style/partials/variables.scss';
   .footer-top {
     background-color: $background-blue; 
     display: flex;
@@ -187,7 +187,7 @@ export default {
   }
 
   .footer-middle {
-    background-image: url(../assets/img/footer-bg.jpg);
+    background-image: url(../../assets/img/footer-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

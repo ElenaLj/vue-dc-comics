@@ -1,22 +1,25 @@
 <template>
   <main>
     <div class="container">
-      ******  CONTENT GOES HERE ******
+      <Comics/>
     </div>
   </main>
 </template>
 
 <script>
+import Comics from "../sections/Comics.vue"
 export default {
-    name: "Main"
+    name: "Main",
+    components: {
+      Comics
+    }
 }
 </script>
 
 <style lang="scss">
-@import '../assets/style/partials/variables.scss';
+@import '../../assets/style/partials/variables.scss';
 
   main {
-    height: 100px;
     background-color: $background-dark;
 
     .container {
