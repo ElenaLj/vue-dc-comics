@@ -6,16 +6,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">characters</a></li>
-                    <li><a href="#">comics</a></li>
-                    <li><a href="#">movies</a></li>
-                    <li><a href="#">tv</a></li>
-                    <li><a href="#">games</a></li>
-                    <li><a href="#">collectibles</a></li>
-                    <li><a href="#">videos</a></li>
-                    <li><a href="#">fans</a></li>
-                    <li><a href="#">news</a></li>
-                    <li><a href="#">shop</a></li>
+                    <li v-for="(link, index) in links" :key="index"><a v-bind:href="link.url" :class="{active: link.current}">{{link.text}}</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,7 +15,63 @@
 
 <script>
 export default {
-    name: "Header"
+    name: "Header",
+    data() {
+        return { 
+            links: [
+                {
+                    text: "characters",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "comics",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "movies",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "tv",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "games",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "collectibles",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "videos",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "fans",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "news",
+                    url: "#",
+                    current: false
+                },
+                {
+                    text: "shop",
+                    url: "#",
+                    current: false
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -33,17 +80,26 @@ export default {
     header {
         background-color: $background-light;
 
-        ul {
-        display: flex;
+        .container  {
+            padding: 10px 0;
 
-        li a {
-            display: inline-block;
-            padding: 10px;
-            color: $text-dark;
-            font-size: 13px;
-            font-weight: $text-bold;
-            text-transform: $text-uppercase;
+                ul {
+                    display: flex;
+
+                    li a {
+                        display: inline-block;
+                        padding: 10px;
+                        color: $text-dark;
+                        font-size: 13px;
+                        font-weight: $text-bold;
+                        text-transform: $text-uppercase;
+
+                            &.active, &:hover {
+                                border-bottom: 2px solid $text-blue;
+                                color: $text-blue;
+                            }
+                    }
+                }
         }
-    }
     }
 </style>
