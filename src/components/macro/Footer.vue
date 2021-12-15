@@ -41,56 +41,29 @@
           <div class="links">
 
             <div class="col-one">
-              <!-- first column links sections -->
               <h3>dc comics</h3>
               <ul>
-                <li><a href="#">Characters</a></li>
-                <li><a href="#">Comics</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">News</a></li>
+                <li v-for="(link, index) in linksComics" :key="index"><a :href="link.url">{{link.title}}</a></li>
               </ul>
 
               <h3>shop</h3>
               <ul>
-                <li><a href="#">Shop DC</a></li>
-                <li><a href="#">Shop DC Collectibles</a></li>
+                <li v-for="(link, index) in linksShop" :key="index"><a :href="link.url">{{link.title}}</a></li>
               </ul>
-              <!-- /first column links section -->
             </div>
 
             <div class="col-two">
-              <!-- first column links sections -->
               <h3>DC</h3>
               <ul>
-                <li><a href="#">Terms Of Use</a></li>
-                <li><a href="#">Privacy policy (New)</a></li>
-                <li><a href="#">Ad Choices</a></li>
-                <li><a href="#">Advertising</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Subscriptions</a></li>
-                <li><a href="#">Talent Workshops</a></li>
-                <li><a href="#">CPSC Certificates</a></li>
-                <li><a href="#">Ratings</a></li>
-                <li><a href="#">Shop Help</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li v-for="(link, index) in linksOther" :key="index"><a :href="link.url">{{link.title}}</a></li>
               </ul>
-              <!-- /first column links section -->
             </div>
 
             <div class="col-three">
-              <!-- first column links sections -->
               <h3>sites</h3>
               <ul>
-                <li><a href="#">DC</a></li>
-                <li><a href="#">MAD Magazine</a></li>
-                <li><a href="#">DC Kids</a></li>
-                <li><a href="#">DC Universe</a></li>
-                <li><a href="#">DC Power Visa</a></li>
+                <li v-for="(link, index) in linksSites" :key="index"><a :href="link.url">{{link.title}}</a></li>
               </ul>
-              <!-- /first column links section -->
             </div>
           </div>
           <!-- /footer links section -->
@@ -109,15 +82,15 @@
         <div class="container">
 
           <button>sign-up now!</button>
-
-          <div>
+          
+          <!-- socials -->
+          <div class="socials">
             <span>follow us</span>
-            <img src="../../assets/img/footer-facebook.png" alt="facebook">
-            <img src="../../assets/img/footer-twitter.png" alt="twitter">
-            <img src="../../assets/img/footer-youtube.png" alt="youtube">
-            <img src="../../assets/img/footer-pinterest.png" alt="pinterest">
-            <img src="../../assets/img/footer-periscope.png" alt="periscope">
+            <div v-for="(social, index) in socials" :key="index">
+              <img :src="require(`../../assets/img/${social.src}`)" :alt="social.alt">
+            </div>
           </div>
+          <!-- /socials -->
         </div>
 
       </div>
@@ -156,6 +129,136 @@ export default {
             text: "dc power visa",
             src: "buy-dc-power-visa.svg",
             alt: "DC Power Visa"
+          }
+        ], 
+        linksComics: [
+          {
+            title: "Characters",
+            url: "#"
+          },
+          {
+            title: "Comics",
+            url: "#"
+          },
+          {
+            title: "Movies",
+            url: "#"
+          },
+          {
+            title: "TV",
+            url: "#"
+          },
+          {
+            title: "Games",
+            url: "#"
+          },
+          {
+            title: "Videos",
+            url: "#"
+          },
+          {
+            title: "News",
+            url: "#"
+          }
+        ],
+        linksShop: [
+          {
+            title: "Shop DC",
+            url: "#"
+          },
+          {
+            title: "Shop DC Collectibles",
+            url: "#"
+          }
+        ],
+        linksOther: [
+          {
+            title: "Terms Of Use",
+            url: "#"
+          },
+          {
+            title: "Privacy policy (New)",
+            url: "#"
+          },
+          {
+            title: "Ad Choices",
+            url: "#"
+          },
+          {
+            title: "Advertising",
+            url: "#"
+          },
+          {
+            title: "Jobs",
+            url: "#"
+          },
+          {
+            title: "Subscriptions",
+            url: "#"
+          },
+          {
+            title: "Talent Workshops",
+            url: "#"
+          },
+          {
+            title: "CPSC Certificates",
+            url: "#"
+          },
+          {
+            title: "Ratings",
+            url: "#"
+          },
+          {
+            title: "Shop Help",
+            url: "#"
+          },
+          {
+            title: "Contact Us",
+            url: "#"
+          }
+        ],
+        linksSites: [
+          {
+            title: "DC",
+            url: "#"
+          },
+          {
+            title: "MAD Magazine",
+            url: "#"
+          },
+          {
+            title: "DC Kids",
+            url: "#"
+          },
+          {
+            title: "DC Universe",
+            url: "#"
+          },
+          {
+            title: "DC Power Visa",
+            url: "#"
+          }
+        ],
+        socials: [
+          {
+            src: "footer-facebook.png",
+            alt: "facebook"
+          },
+          {
+            src: "footer-twitter.png",
+            alt: "twitter"
+          },
+          {
+            src: "footer-youtube.png",
+            alt: "youtube"
+          },
+          {
+            src: "footer-pinterest.png",
+            alt: "pinterest"
+          },
+          {
+            src: "footer-periscope.png",
+            alt: "periscope"
           }
         ]
       }
@@ -225,7 +328,7 @@ export default {
         text-transform: $text-uppercase;
       }
 
-      div {
+      .socials {
         display: flex;
         flex-grow: 1;
         justify-content: flex-end;
