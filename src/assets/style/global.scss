@@ -10,17 +10,11 @@
 }
 
 /* - - - - - - - - - - 
-    global
-- - - - - - - - - - - */
-header {
-    height: 100px;
-}
-
-/* - - - - - - - - - - 
     containers
 - - - - - - - - - - - */
 .container {
     margin: 0 auto;
+    padding: 10px 0;
     width: 70%;
     max-width: 1200px;
     display: flex;

@@ -108,7 +108,7 @@ export default {
 
     #main-btn {
         position: absolute;
-        top: -20px;
+        top: -30px;
         padding: 10px 15px;
         border: none;
         background-color: $background-blue;

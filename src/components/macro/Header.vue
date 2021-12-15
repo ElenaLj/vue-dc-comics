@@ -80,11 +80,14 @@ export default {
     header {
         background-color: $background-light;
 
+        img {
+            height: 80px;
+        }
+
         ul {
             display: flex;
 
             li a {
-                    display: inline-block;
                     padding: 10px;
                     color: $text-dark;
                     font-size: 13px;
@@ -92,6 +95,7 @@ export default {
                     text-transform: $text-uppercase;
 
                         &.active, &:hover {
+                            padding-bottom: 8px;
                             border-bottom: 2px solid $text-blue;
                             color: $text-blue;
                         }
