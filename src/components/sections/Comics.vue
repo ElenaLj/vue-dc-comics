@@ -1,10 +1,15 @@
 <template>
     <section>
+        <button id="main-btn">current series</button>
+        
         <div class="comics-list">
             <div class="comics" v-for="(comic, index) in comics" :key="index">
                 <img :src="comic.thumb" :alt="comic.type">
                 <p>{{comic.series}}</p>
             </div>
+        </div>
+        <div class="button">
+            <button>load more</button>
         </div>
     </section>
 </template>
@@ -95,6 +100,28 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/style/partials/variables.scss';
+
+    section {
+        padding: 30px 0;
+        position: relative;
+    }
+
+    #main-btn {
+        position: absolute;
+        top: -20px;
+        padding: 10px 15px;
+        border: none;
+        background-color: $background-blue;
+        color: $text-light;
+        font-size: 16px;
+        font-weight: $text-bold;
+        text-transform: $text-uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     .comics-list{
         display: flex;
         flex-wrap: wrap;
@@ -102,6 +129,7 @@ export default {
         .comics {
             width: calc(100% / 6 - 20px);
             margin:10px ;
+            padding: 20px 0;
 
             img {
                 object-fit: cover;
@@ -115,6 +143,24 @@ export default {
                 text-transform: $text-uppercase;
             }
         } 
+    }
+
+    .button {
+        text-align: center;
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: $background-blue;
+            color: $text-light;
+            font-size: 12px;
+            font-weight: $text-bold;
+            text-transform: $text-uppercase;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
     
 </style>

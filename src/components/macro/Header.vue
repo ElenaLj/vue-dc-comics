@@ -80,26 +80,23 @@ export default {
     header {
         background-color: $background-light;
 
-        .container  {
-            padding: 10px 0;
+        ul {
+            display: flex;
 
-                ul {
-                    display: flex;
+            li a {
+                    display: inline-block;
+                    padding: 10px;
+                    color: $text-dark;
+                    font-size: 13px;
+                    font-weight: $text-bold;
+                    text-transform: $text-uppercase;
 
-                    li a {
-                        display: inline-block;
-                        padding: 10px;
-                        color: $text-dark;
-                        font-size: 13px;
-                        font-weight: $text-bold;
-                        text-transform: $text-uppercase;
-
-                            &.active, &:hover {
-                                border-bottom: 2px solid $text-blue;
-                                color: $text-blue;
-                            }
-                    }
+                        &.active, &:hover {
+                            border-bottom: 2px solid $text-blue;
+                            color: $text-blue;
+                        }
                 }
         }
+        
     }
 </style>
